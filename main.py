@@ -1,5 +1,5 @@
-from pyspark.sql import SparkSession
+import pandas as pd
 
-spark = SparkSession.builder.appName('myApp').getOrCreate()
+df = pd.read_csv('Tomato.csv')
 
-df = spark.read.csv('Tomato.csv', header=True, inferSchema=True)
+print(df)
